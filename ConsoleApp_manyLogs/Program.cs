@@ -13,12 +13,15 @@ namespace ConsoleApp_manyLogs
         /// <summary>
         /// New instance for log
         /// </summary>
+        private static readonly ILog log = LogManager.GetLogger(typeof(Program));
         private static readonly ILog logA = LogManager.GetLogger(Assembly.GetExecutingAssembly(), "Logger_Sample_A");
         private static readonly ILog logB = LogManager.GetLogger(Assembly.GetExecutingAssembly(), "Logger_Sample_B");
 
         static void Main(string[] args)
         {
             new BaseLog4NetXmlConfigurator();
+
+            log.Debug("desenvolvimento");
 
             logA.Debug("desenvolvimento");
             logA.Warn("atenção!");
