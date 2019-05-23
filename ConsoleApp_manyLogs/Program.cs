@@ -21,19 +21,38 @@ namespace ConsoleApp_manyLogs
         {
             new BaseLog4NetXmlConfigurator();
 
-            log.Debug("desenvolvimento");
+            //try
+            //{
+            //    throw new NullReferenceException("teste");
+            //}catch(Exception ex)
+            //{
+            //    log.Error("desenvolvimento", ex);
+            //}
 
-            logA.Debug("desenvolvimento");
-            logA.Warn("atenção!");
-            logA.Info("informção");
-            logA.Error("problema!");
-            logA.Fatal("vixee");
+            // [%P{tgp}] == [Godinho]
+            log4net.ThreadContext.Properties["tgp"] = "Valor criado em execução..";
 
-            logB.Debug("desenvolvimento");
-            logB.Warn("atenção!");
-            logB.Info("informção");
-            logB.Error("problema!");
-            logB.Fatal("vixee");
+            log.Debug("passando typeof");
+            logA.Debug("com nome do logger A");
+            logB.Debug("com nome do logger B");
+
+            //for(int i = 0; i < 10; i++)
+            //{
+            //    log.Debug("desenvolvimento");
+
+            //    logA.Debug("desenvolvimento");
+            //    logA.Warn("atenção!");
+            //    logA.Info("informção");
+            //    logA.Error("problema!");
+            //    logA.Fatal("vixee");
+
+            //    logB.Debug("desenvolvimento");
+            //    logB.Warn("atenção!");
+            //    logB.Info("informção");
+            //    logB.Error("problema!");
+            //    logB.Fatal("vixee");
+            //}
+
         }
     }
 }

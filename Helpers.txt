@@ -1,0 +1,5 @@
+appender:
+https://logging.apache.org/log4net/release/config-examples.html
+
+conversionPattern:
+https://logging.apache.org/log4net/log4net-1.2.13/release/sdk/log4net.Layout.PatternLayout.html

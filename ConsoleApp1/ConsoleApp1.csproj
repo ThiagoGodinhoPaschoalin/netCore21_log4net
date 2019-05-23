@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,11 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="log4net.config" />
+    <None Remove="sync.log4net" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="log4net.config" />
+    <EmbeddedResource Include="sync.log4net" />
   </ItemGroup>
 
   <ItemGroup>
